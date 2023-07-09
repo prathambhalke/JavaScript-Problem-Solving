@@ -8,6 +8,10 @@ const countNegativeValues = (array) => {
     }
   });
   console.log(count);
+
+  //! another approch
+  //   const res = array.filter((el) => el < 0).length;
+  //   console.log(res)
 };
 
 countNegativeValues([1, -2, 2, -4]); //Expected 2
