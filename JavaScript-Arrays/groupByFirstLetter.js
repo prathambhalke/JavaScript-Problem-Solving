@@ -4,15 +4,13 @@ const groupByFirstLetter = (array) => {
   const result = {};
   array.forEach((item) => {
     let firstLetter = item[0].toLowerCase();
-    if (result[firstLetter]) {
-      result[firstLetter].push(item);
-    } else {
-      result[firstLetter] = [item];
-    }
+    result[firstLetter]
+      ? result[firstLetter].push(item)
+      : (result[firstLetter] = [item]);
   });
   console.log(result);
 };
 
-const strings = ["Alf", "Alice", "Ben", "apple", "banana"];
-groupByFirstLetter(strings); 
-// Expected { a: [ 'Alf', 'Alice', 'apple' ], b: [ 'Ben', 'banana' ] }
+const strings = ["Alf", "Alice", "Ben", "apple", "banana", "cat", "cow"];
+groupByFirstLetter(strings);
+// Expected { a: [ 'Alf', 'Alice', 'apple' ],b: [ 'Ben', 'banana' ],c: [ 'cat', 'cow' ]}
