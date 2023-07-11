@@ -14,4 +14,5 @@ const groupByFirstLetter = (array) => {
 };
 
 const strings = ["Alf", "Alice", "Ben", "apple", "banana"];
-groupByFirstLetter(strings);
+groupByFirstLetter(strings); 
+// Expected { a: [ 'Alf', 'Alice', 'apple' ], b: [ 'Ben', 'banana' ] }
