@@ -13,7 +13,7 @@ function FindIntersection(strArr) {
       }
     }
   }
-  return result.join(",");
+  return result.length > 0 ? result.join(",") : "false";
 }
 
 let strArray = ["1,4,6,12", "1,3,5,6,8,12"];
